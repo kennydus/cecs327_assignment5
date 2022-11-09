@@ -14,6 +14,7 @@ public class UDPClient{
 
         // args give message contents and server hostname
         try {
+            in.nextLine();
             aSocket = new DatagramSocket();
 
             while (true) {
