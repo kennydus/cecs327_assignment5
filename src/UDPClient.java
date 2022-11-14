@@ -14,12 +14,12 @@ public class UDPClient{
 
         // args give message contents and server hostname
         try {
-            in.nextLine();
+            in.nextLine();      // Prevents UDPClient from initially sending a blank message.
             aSocket = new DatagramSocket();
 
             while (true) {
                 System.out.println("Enter a message to send to the server: ");
-                String message = in.nextLine();
+                String message = in.nextLine();                         // Gets message to be sent from user input.
 
                 byte[] m = message.getBytes();
                 InetAddress aHost = InetAddress.getByName(ipAddr);      // Creates IP address from inputted IP string

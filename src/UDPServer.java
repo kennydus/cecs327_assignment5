@@ -25,8 +25,8 @@ public class UDPServer{
                 buffer = receivedMessage.toUpperCase().getBytes();      // Puts the client message in Upper Case form
                                                                         // and stores it into the buffer
 
-                DatagramPacket reply = new DatagramPacket(buffer, buffer.length,    // Creating reply packet
-                        request.getAddress(), request.getPort());
+                DatagramPacket reply = new DatagramPacket(buffer, buffer.length,    // Creating reply packet containing
+                        request.getAddress(), request.getPort());                   // modified message
                 aSocket.send(reply);                                    // Sending reply packet to the client
             }
         }
